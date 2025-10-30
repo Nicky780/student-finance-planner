@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student Finance Planner</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="An all-in-one financial management app for university students. It helps with budgeting, tracking expenses, managing student loans, setting savings goals, and provides AI-powered financial literacy tips to foster healthy financial habits. Features visual spending charts and a dark/light mode." />
+    <meta name="keywords" content="student finance, budget app, expense tracker, savings goal, student loan, financial literacy, Kenya, university student, FinPal" />
+    
+    <!-- Theme and PWA -->
+    <meta name="theme-color" content="#4f46e5" />
+    <link rel="manifest" href="/manifest.json" />
+    
+    <!-- Social Media Sharing -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Student Finance Planner" />
+    <meta property="og:description" content="An all-in-one financial management app for university students to manage budgets, expenses, loans, and savings goals." />
+    <meta property="og:image" content="/icon-512x512.png" />
+    <meta property="og:url" content="/" />
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:title" content="Student Finance Planner" />
+    <meta property="twitter:description" content="An all-in-one financial management app for university students to manage budgets, expenses, loans, and savings goals." />
+    <meta property="twitter:image" content="/icon-512x512.png" />
+    
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script type="importmap">
+{
+  "imports": {
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.27.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "webworker": "https://aistudiocdn.com/webworker@^0.8.4"
+  }
+}
+</script>
+  <link rel="stylesheet" href="/index.css">
+</head>
+  <body class="bg-gray-50 dark:bg-gray-900">
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+    
+    <!-- Script to register the service worker -->
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('/service-worker.ts')
+            .then(registration => {
+              console.log('ServiceWorker registration successful with scope: ', registration.scope);
+            })
+            .catch(error => {
+              console.log('ServiceWorker registration failed: ', error);
+            });
+        });
+      }
+    </script>
+  </body>
+</html>

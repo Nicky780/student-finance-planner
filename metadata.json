@@ -1,0 +1,5 @@
+{
+  "name": "Student Finance Planner",
+  "description": "An all-in-one financial management app for university students. It helps with budgeting, tracking expenses, managing student loans, setting savings goals, and provides AI-powered financial literacy tips to foster healthy financial habits. Features visual spending charts and a dark/light mode.",
+  "requestFramePermissions": []
+}
